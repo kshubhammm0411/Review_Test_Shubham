@@ -1,0 +1,13 @@
+/chrone_env
+**/.DS_Store
+__pycache__/
+flask_session/
+**.pyc
+error.log
+env/
+app.zip
+rank_test.py
+.vscode
+resource/
+app_config.py
+env_params.json

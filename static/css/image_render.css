@@ -1,0 +1,217 @@
+/* Container needed to position the button. Adjust the width as needed
+.img_container {
+  max-width: 239px;
+  padding: 4px 0 0 4px;
+  position: relative;
+  vertical-align: top;
+  width: calc(33.3% - 4px);
+}
+
+.c img {
+  border: none;
+}
+
+.bottom_btn_container{
+  align-items: flex-end;
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 70%,rgba(0,0,0,.6) 100%);
+  bottom: 0;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  position: absolute;
+  width: calc(100% - 4px);
+}
+
+.img_container .bottom_btn_container .rev_btn_cont{
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 4px 8px;
+  opacity: .87;
+}
+
+.img_img_cont .dur_btn_cont{
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  height: 24px;
+  margin: 0 8px 4px auto;
+  opacity: .87;
+} */
+
+.img_cont {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.img_cont img {
+  height: 150px;
+  width: 150px;
+}
+
+.img_cont .del {
+  position: absolute;
+  top: 9%;
+  right: -5%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity: 0.9;
+  font-size: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  background: white;
+  padding: 4px 6px;
+}
+
+.img_cont .upl {
+  position: absolute;
+  top: 9%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity: 0.9;
+  font-size: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  background: white;
+  padding: 4px 6px;
+}
+
+.img_cont .rev {
+  position: absolute;
+  bottom: 2%;
+  left: 20%;
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 12px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0px;
+  background: transparent;
+}
+
+.img_cont .grad {
+  position: absolute;
+  height: 48px; 
+  bottom: -16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  height: 100;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 70%,rgba(0,0,0,.6) 100%);
+}
+
+.icon_del {
+  color: rgb(255, 0, 0);
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+
+.icon_upl {
+  color: rgb(0, 150, 0);
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+
+.img_cont .time{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  bottom: -25%;
+  right: 0%;
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  height: 24px;
+  margin: 0 8px 4px auto;
+  opacity: .87;
+  border: none;
+  background: transparent;
+  padding: 0px;
+}
+
+.show_photo {
+  position: relative;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  border-style: solid;
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 7px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 15px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 15px;
+}
+
+@media all and (max-width: 450px) and (min-height: 400px) {
+
+  .img_cont {
+    position: relative;
+    width: 100%;
+    height: 160px;
+  }
+
+  .img_cont img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .img_cont .rev{
+    bottom: -8%;
+    left : 20%;
+  }
+
+  .img_cont .time{
+    bottom: -36%;
+    right: -5%;
+  }
+
+  .img_cont .del{
+    top: 13%;
+    right: -5%;
+  }
+
+  .img_cont .upl{
+    top: 13%;
+    right: 15%;
+  }
+
+  .img_cont .grad{
+    bottom: -18%;
+  }
+
+}

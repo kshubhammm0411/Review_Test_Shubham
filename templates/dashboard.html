@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chrone - Google Business</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="../static/vendors/typicons.font/font/typicons.css">
+    <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../static/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../static/css/nav.css">
+    <link rel="stylesheet" href="../static/css/loader.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../static/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../static/images/favicon.png" />
+    <meta property="og:title" content="Google Business Profile Accelerator | Chrone">
+    <meta property="og:description" content="Google is greatest market place out there. We help you grow your business for long term by improving your SEO. We provide you with the greatest tool ever made to manage your google business profile">
+    <meta property="og:url" content="https://chrone.work/google/dashboard">
+    <meta property="og:image" content="https://chrone.work/link_preview">
+    <script src="https://kit.fontawesome.com/a40af5c449.js" crossorigin="anonymous"></script>
+    <script type='text/javascript'>
+      window.smartlook||(function(d) {
+        var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+        var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+        c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+        })(document);
+        smartlook('init', '01228557b7634d29a271a3238776c1752eaa5153', { region: 'eu' });
+    </script>
+    <!-- Hotjar Tracking Code for https://chrone.ai -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:3203533,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <script src="../static/js/common/login.js"></script>
+  </head>
+  <body class="sidebar-hidden">
+    <div class="container-scroller d-none">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="/dashboard"><img src="../static/img/chrone.svg" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <div class="d-none d-md-block" style="border-bottom: 2px solid #aaa;">
+                <a class="nav-link active dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="home_xg_tab" style="cursor: pointer;" data-toggle="dropdown">
+                    <span style="margin: 0px;" class="nav-profile-name"><b>Home</b></span>
+                </a>
+              </div>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="reviews_xg_tab" style="width: 60px;cursor: pointer;" data-toggle="dropdown">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Reviews</b></span>
+              </a>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="photos_xg_tab" style="cursor: pointer;">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Photos</b></span>
+              </a>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="posts_xg_tab" style="cursor: pointer;">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Posts</b></span>
+              </a>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="account_xg_tab" style="cursor: pointer;">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Account</b></span>
+              </a>
+              <button type="button" id="upload-pics_xg_tab" class="btn btn-primary btn-fw m-1" style="width: 8rem; height: 36px;">Upload Photos</button>
+              <div class="dropdown d-md-none">
+                <button class="navbar-toggler navbar-toggler-right align-self-center" type="button" data-toggle="dropdown" aria-haspopup="true">
+                  <span class="typcn typcn-th-menu"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3" id="menu_dropdown" data-x-placement="top-start" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 70px; left: -100px; transform: translate3d(0px, 35px, 0px);">
+                  <a class="dropdown-item" id="photos_dropdown_tab">Photos</a>
+                  <a class="dropdown-item" id="reviews_dropdown_tab">Reviews</a>
+                  <a class="dropdown-item" id="account_dropdown_tab">Account</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="p-0 navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button">
+            
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper" id="home">
+            <h3 id="welcome_msg"></h3>
+            <p>Let's improve your SEO and rank your profile higher on Google!</p>
+            <div class="row mt-3">
+              <!-- <div class="col-lg-12 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between flex-column">
+                      <h4 class="card-title mb-3">Profile</h4>
+                      <p>Manage your business profile details from Profile page. It will be synced with your Google Business profile and other cited platform profiles.</p>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 d-flex">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <div class="col-lg-12 d-flex grid-margin stretch-card" id="review_reply">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Send Review Link</h4>
+                    </div>
+                    <div class="table-responsive d-flex">
+                      <!-- <button id="review_share_link" type="button" class="btn btn-primary btn-fw m-1" style="width: 8rem; height: 36px;" data-toggle="modal" data-target="#review_invite">Share via Text</button> -->
+                      <button id="review_copy_link" type="button" class="btn btn-info btn-fw m-1" style="width: 8rem; height: 36px;">Copy Link</button>
+                      <button id="review_qrcode" type="button" class="btn btn-info btn-fw m-1" style="width: 10rem; height: 36px;" data-toggle="modal" data-target="#exampleModal">Generate QR Code</button>
+                    </div>
+                    <div class="table-responsive d-flex">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-md-none col-lg-12 d-flex grid-margin stretch-card" id="review_reply">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Ask for Review</h4>
+                    </div>
+                    <div class="table-responsive d-flex">
+                      <textarea id="text_msg" name="textmsg" rows="6" style="width: 100%;" ></textarea>
+                    </div>
+                    <div class="table-responsive d-flex justify-content-center p-2">
+                      <button id="send_text_msg" type="button" class="btn btn-info btn-fw m-1" style="width: auto; height: 36px;">Send Message</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Quick Actions</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 d-flex flex-wrap">
+                        <button id="actionable_cta_account" type="button" class="btn btn-outline-info btn-fw m-1" style="width: 8.5rem; height: 36px;">Manage Account</button>
+                        <button id="actionable_cta_review" type="button" class="btn btn-outline-info btn-fw m-1" style="width: 8.5rem; height: 36px;">Reply on Review</button>
+                        <button id="actionable_cta_upload_photo" type="button" class="btn btn-outline-info btn-fw m-1" style="width: 8.5rem; height: 36px;">Upload Photos</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-12 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body" id="recent-post">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Recent Post</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="posts-list" class="d-flex flex-column">
+                          <div class="" id="loader_posts">
+                            <div class="loader"></div>
+                          </div>
+                        </div>
+                        <div id="all_post_cont" class="d-flex justify-content-center">
+                          <button id="posts_home_tab" class="d-none btn btn-outline-info btn-fw m-1" style="width: 8rem; height:36px;">All Posts</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Profile Views</h4>
+                      <span>last 30 days</span>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <canvas id="impressions" style="max-height: 300px; max-width: 600px;"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 d-flex grid-margin stretch-card">
+                <div id="profile_comp_div" class="card d-none">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Profile</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 d-flex flex-column">
+                        <button id="profile_comp_btn" type="button" class="btn btn-secondary btn-fw m-1" style="width: 12rem; height: 36px;" data-toggle="modal" data-target="#profile_completion">Complete your profile</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 d-flex grid-margin stretch-card">
+                <div id="profile_comp_div" class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Connect to Square for automated reviews</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 d-flex flex-column">
+                        <button id="connect_square" type="button" class="btn btn-outline-info btn-fw m-1" style="width: 150px; height: 36px;">Connect to Square</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex d-md-none flex-row" style="position:fixed; bottom:0;">
+              <div id="home_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center; background-color:blue">
+                <!-- <span class="nav-profile-name">Home</span> -->
+                <button class="btn btn-dark" style="border-radius:0; width: 100%; height:100%; border:1px solid white">Home</button>
+              </div>
+              <div id="photos_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+                <!-- <span class="nav-profile-name">Reviews</span> -->
+                <button class="btn btn-light" style="width: 100%; height:100%; border:1px solid white">Photos</button>
+              </div>
+              <div id="reviews_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+                <!-- <span class="nav-profile-name">Reviews</span> -->
+                <button class="btn btn-light" style="width: 100%; height:100%; border:1px solid white">Reviews</button>
+              </div>
+              <div id="posts_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+                <!-- <span class="nav-profile-name">Reviews</span> -->
+                <button class="btn btn-light" style="width: 100%; height:100%; border:1px solid white">Posts</button>
+              </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer d-md-flex d-none">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.chrone.app/" target="_blank">Chrone</a> 2022</span>
+              <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from Bootstrapdash.com</span> -->
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+
+    <div class="modal fade" id="review_invite" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Send Review Message</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-description">
+                  Text your customers to ask for a review.
+                </p>
+                <form class="forms-sample">
+                  <div class="form-group">
+                    <label for="exampleInputUsername1">Name</label>
+                    <input type="text" class="form-control" id="customer_name" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Phone</label><br>
+                    <div class="d-flex">
+                      <select name="countryCode" class="form-control" id="country_code" style="max-width: 120px;">
+                        <option data-countryCode="US" selected value="1">USA (+1)</option>
+                        <option data-countryCode="CA" value="1">Canada (+1)</option>
+                        <option data-countryCode="IN" value="91">India (+91)</option>
+                      </select>
+                      <input type="phone" class="form-control" id="customer_phone" placeholder="Phone">
+                    </div>
+                  </div>
+                  <div class="btn btn-primary btn-fw" id="customer_send_sms">Send</div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Review QR Code</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="display: flex; justify-content:center">
+            <img id="big-qr-code" alt="QR Code" height="320" width="320">
+          </div>
+          <div class="modal-footer">
+            <button id="close_qr" type="button" class="btn btn-secondary qr-code-modal-close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="squareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              Click to connect
+            </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Completion -->
+    <div class="modal fade" id="profile_completion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Profile Completion</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card">
+              <div class="card-body">
+                <form class="forms-sample">
+                  <div class="form-group d-none" id="phone">
+                    <label for="exampleInputUsername1">Phone Number</label>
+                    <input type="tel" class="form-control" id="sp_phone" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="888 888 8888">
+                  </div>
+                  <div class="form-group d-none" id="personal_number">
+                    <label for="exampleInputUsername1">Personal Number</label>
+                    <input type="tel" class="form-control" id="sp_personal_phone" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="888 888 8888">
+                  </div>
+                  <div class="form-group d-none" id="website">
+                    <label for="exampleInputUsername1">Website Link</label>
+                    <input type="text" class="form-control" id="sp_website" placeholder="website link">
+                  </div>
+                  <div class="form-group d-none" id="appointment_link">
+                    <label for="exampleInputEmail1">Appointment Link</label><br>
+                    <input type="text" class="form-control" id="sp_appointment_link" placeholder="Appointment Link">
+                  </div>
+                  <div class="form-group d-none" id="open_date">
+                    <label for="exampleInputEmail1">Open Date</label><br>
+                    <input type="date" class="form-control" id="sp_open_date" name="openDate">
+                  </div>
+                  <div class="form-group d-none" id="description" >
+                    <label for="exampleInputEmail1">Description</label><br>
+                    <textarea type="text" width="100%" rows="6" class="form-control" id="sp_description" placeholder="Description"></textarea>
+                  </div>
+                  <div class="form-group d-none" id="zipcode" >
+                    <label for="exampleInputEmail1">Zip Code</label><br>
+                    <input type="text" class="form-control" id="sp_zip" maxlength="5" pattern="[0-9]+" placeholder="00000">
+                  </div>
+                  <div class="form-group d-none" id="state" >
+                    <label for="exampleInputEmail1">State</label><br>
+                    <select id="sp_state">
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ" selected>Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="DC">District Of Columbia</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </div>
+                  <div class="form-group d-none" id="city" >
+                    <label for="exampleInputEmail1">City</label><br>
+                    <input type="text" class="form-control" id="sp_city" placeholder="City">
+                  </div>
+                  <!-- <div class="form-group d-none" id="regularHours" >
+                    <label for="exampleInputEmail1">Regular Hours</label><br>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="mon_rh_chk" name="Monday" value="sp_rh_mon">
+                      &nbsp;&nbsp;
+                      <label for="Monday" style="align-self: center;margin: 0px;">Monday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_mon_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Monday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_mon_end" name="closeTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="tue_rh_chk" name="Tuesday" value="sp_rh_tue">
+                      &nbsp;&nbsp;
+                      <label for="Tuesday" style="align-self: center;margin: 0px;flex-grow: 1;">Tuesday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_tue_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Monday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_tue_end" name="closeTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="wed_rh_chk" name="Wednesday" value="sp_rh_wed">
+                      &nbsp;&nbsp;
+                      <label for="Wednesday" style="align-self: center;margin: 0px;flex-grow: 1;">Wednesday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_wed_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Wednesday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_wed_end" name="closeTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="thu_rh_chk" name="Thursday" value="sp_rh_thu">
+                      &nbsp;&nbsp;
+                      <label for="Thursday" style="align-self: center;margin: 0px;flex-grow: 1;">Thursday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_thu_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Thursday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_thu_end" name="closeTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="fri_rh_chk" name="Friday" value="sp_rh_fri">
+                      &nbsp;&nbsp;
+                      <label for="Friday" style="align-self: center;margin: 0px;flex-grow: 1;">Friday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_fri_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Friday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_fri_end" name="closeTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="sat_rh_chk" name="Saturday" value="sp_rh_sat">
+                      &nbsp;&nbsp;
+                      <label for="Saturday" style="align-self: center;margin: 0px;flex-grow: 1;">Saturday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_sat_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Saturday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_sat_end" name="closeTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="sun_rh_chk" name="Sunday" value="sp_rh_sun">
+                      &nbsp;&nbsp;
+                      <label for="Sunday" style="align-self: center;margin: 0px;flex-grow: 1;">Sunday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_sun_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Sunday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_sun_end" name="closeTime" style="width: 100px;"><br>
+                      </div>
+                  </div> -->
+                  <div class="form-group d-none" id="address" >
+                    <label for="exampleInputEmail1">Line Address</label><br>
+                    <input type="text" class="form-control" id="sp_address" placeholder="Address">
+                  </div>
+                  <!-- <div class="form-group d-none" id="specialHours" >
+                    <label for="exampleInputEmail1">Special Hours</label><br>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="mon_sh_chk" name="Monday" value="sp_sh_mon">
+                      &nbsp;&nbsp;
+                      <label for="Monday" style="align-self: center;margin: 0px;">Monday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_mon_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Monday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_mon_end" name="closeTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="tue_sh_chk" name="Tuesday" value="sp_sh_tue">
+                      &nbsp;&nbsp;
+                      <label for="Tuesday" style="align-self: center;margin: 0px;flex-grow: 1;">Tuesday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_hh_tue_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Monday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_hh_tue_end" name="ocloseTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="wed_sh_chk" name="Wednesday" value="sp_sh_wed">
+                      &nbsp;&nbsp;
+                      <label for="Wednesday" style="align-self: center;margin: 0px;flex-grow: 1;">Wednesday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_wed_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Wednesday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_wed_end" name="ocloseTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="thu_sh_chk" name="Thursday" value="sp_sh_thu">
+                      &nbsp;&nbsp;
+                      <label for="Thursday" style="align-self: center;margin: 0px;flex-grow: 1;">Thursday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_thu_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Thursday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_thu_end" name="ocloseTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="fri_rh_chk" name="Friday" value="sp_rh_fri">
+                      &nbsp;&nbsp;
+                      <label for="Friday" style="align-self: center;margin: 0px;flex-grow: 1;">Friday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_fri_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Friday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_fri_end" name="ocloseTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="sat_sh_chk" name="Saturday" value="sp_sh_sat">
+                      &nbsp;&nbsp;
+                      <label for="Saturday" style="align-self: center;margin: 0px;flex-grow: 1;">Saturday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_sat_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Saturday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_sat_end" name="ocloseTime" style="width: 100px;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="sun_sh_chk" name="Sunday" value="sp_sh_sun">
+                      &nbsp;&nbsp;
+                      <label for="Sunday" style="align-self: center;margin: 0px;flex-grow: 1;">Sunday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_sun_start" name="openTime" style="width: 100px;"><br>
+                        <label for="Sunday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_sun_end" name="ocloseTime" style="width: 100px;"><br>
+                      </div>
+                  </div> -->
+                  <div class="form-group d-none" id="facebook_link">
+                    <label for="exampleInputEmail1">Facebook Link</label><br>
+                    <input type="text" class="form-control" id="sp_facebook_link" placeholder="Facebook Link">
+                  </div>
+                  <div class="form-group d-none" id="instagram_link">
+                    <label for="exampleInputEmail1">Instagram Link</label><br>
+                    <input type="text" class="form-control" id="sp_instagram_link" placeholder="Instagram Link">
+                  </div>
+                  <div class="form-group d-none" id="tiktok_link">
+                    <label for="exampleInputEmail1">Tiktok Link</label><br>
+                    <input type="text" class="form-control" id="sp_tiktok_link" placeholder="Tiktok Link">
+                  </div>
+                  <div class="btn btn-primary btn-fw" id="update_profile_completion">Update</div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary profile-completion-modal-close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../static/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../static/js/off-canvas.js"></script>
+    <script src="../static/js/hoverable-collapse.js"></script>
+    <script src="../static/js/template.js"></script>
+    <script src="../static/js/settings.js"></script>
+    <script src="../static/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="../static/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="../static/vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="../static/js/dashboard.js"></script>
+    <!-- End custom js for this page-->
+    <!-- Start of HubSpot Embed Code -->
+    <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22508010.js"></script>
+    <script type="text/javascript" src="../static/js/hubspot_chat.js"></script> -->
+    <!-- End of HubSpot Embed Code -->
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{title}}</title>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{title}}" />
+    <meta property="og:url" content="https://www.chrone.app" />
+    <meta property="og:image" content="https://s3.amazonaws.com/figma.images/chrone_icon.png" />
+    <!-- Favicons -->
+    <!-- <link href="/static/img/favicon.jpg" rel="icon">
+    <link href="/static/img/favicon.jpg" rel="apple-touch-icon"> -->
+    <link rel="stylesheet" href="static/css/chart_test.css">
+    <!-- <link rel="stylesheet" href="static/css/dashboard.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../static/js/common/login.js"></script>
+</head>
+<body>
+    <div class="main_div">
+        <div class="row_div">
+            <div class="line_div">
+                <canvas  id="ratings_chart" width="400" height="200"></canvas>
+            </div>
+            <div class="line_div">
+                <canvas id="impressions_chart" width="400" height="200"></canvas>
+            </div>
+        </div>
+        <div class="row_div">
+            <div class="line_div">
+                <div id="table_div"></div>
+            </div>
+            <div class="dash_insights_wrapper">
+                <div class="dash_insight_wrapper">
+                    <div class="dash_insight_value"><p>4.5 <span class="rating_count_text">(266)</span></p></div>
+                    <div class="dash_insight_title"><p>Rating</p></div>
+                </div>
+                <div class="dash_insight_wrapper">
+                    <div class="dash_insight_value"><p>4.5 <span class="rating_count_text">(266)</span></p></div>
+                    <div class="dash_insight_title"><p>Rating</p></div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    <script src="/static/js/chart_test.js"></script>
+</body>
+
+</html>

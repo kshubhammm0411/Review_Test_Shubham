@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KG23GMQ');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{title}}</title>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{title}}" />
+    <meta property="og:url" content="https://www.chrone.app" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <meta property="og:image" content="https://s3.amazonaws.com/figma.images/chrone_icon.png" />
+    <!-- Favicons -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG23GMQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div>
+        SMS Test
+    </div>
+    <a href="sms:?body=fregerger hgyurehguer">send sms android</a>
+    <a href="sms:9933932562?body=fregerger hgyurehguer">send sms android</a>
+    <a href="sms:9933932562,9933905117?body=fregerger hgyurehguer">send sms android</a>
+    <a href="sms:open?addresses=9933932562&body=fregerger hgyurehguer">send sms ios</a>
+    <a href="sms:open?addresses=9933932562,9933905117&body=fregerger hgyurehguer">send sms ios</a>
+    <a href="sms:&body=fregerger hgyurehguer">send sms ios</a>
+    <a href="intent://google.com#Intent;scheme=http;package=com.android.chrome;end">chrome intent android</a>
+    <a href="googlechrome://github.com">chrome intent ios</a>
+    <a href="com-apple-mobilesafari-tab:https://github.com">safari intent ios</a>
+    <div id="default">
+        <div id="g_id_onload"
+            data-client_id="396419005169-0rlvknnf4suo2d8a95k91d35rn59cana.apps.googleusercontent.com"
+            data-auto_select="true"
+            data-login_uri="https://chrone.ai/gmb_oauth2callback">
+        </div>
+    </div>
+
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        function detectBrowser() { 
+            if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+                return 'Opera';
+            } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+                return 'Chrome';
+            } else if(navigator.userAgent.indexOf("Safari") != -1) {
+                return 'Safari';
+            } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+                return 'Firefox';
+            } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+                return 'IE';//crap
+            } else {
+                return 'Unknown';
+            }
+        }
+    
+        var browser = detectBrowser();
+        console.log("browser", browser);
+        // document.getElementById("default").innerHTML = browser;
+    });
+
+</script>
+
+</html>

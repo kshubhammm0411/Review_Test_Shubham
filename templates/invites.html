@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Chrone - Google Business</title>
+        <!-- base:css -->
+        <link rel="stylesheet" href="static/vendors/typicons.font/font/typicons.css">
+        <link rel="stylesheet" href="static/vendors/css/vendor.bundle.base.css">
+        <link rel="stylesheet" href="static/vendors/mdi/css/materialdesignicons.min.css">
+        <!-- endinject -->
+        <!-- plugin css for this page -->
+        <!-- End plugin css for this page -->
+        <!-- inject:css -->
+        <link rel="stylesheet" href="static/css/vertical-layout-light/style.css">
+        <!-- endinject -->
+        <link rel="shortcut icon" href="static/images/favicon.png" />
+        <script src="https://kit.fontawesome.com/a40af5c449.js" crossorigin="anonymous"></script>
+        <script src="../static/js/common/login.js"></script>
+      </head>
+    <body class = "p-3">
+        <h1>Invites</h1>
+        <div class="table-responsive pt-3">
+            <table class="table table-bordered">
+            <thead>
+                <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Phone Number
+                </th>
+                <th>
+                    Status
+                </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
+        </div>
+            <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="static/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="static/js/off-canvas.js"></script>
+    <script src="static/js/hoverable-collapse.js"></script>
+    <script src="static/js/template.js"></script>
+    <script src="static/js/settings.js"></script>
+    <script src="static/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="static/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="static/vendors/chart.js/Chart.min.js"></script>
+    <script>
+        $.ajax({
+        url: `${window.location.origin}/get_invites/${localStorage["email"]}`
+        }).then(function (response){
+            console.log(response);
+            for(var i = 0; i < response['phone'].length; i++){
+            $('tbody').append(`
+                <tr>
+                    <td>
+                        ${response['message'][i].split('Hi ')[1].split(',')[0]}
+                    </td>
+                    <td>
+                        ${response['phone'][i]}
+                    </td>
+                    <td>
+                        ${response['review'][i]}
+                    </td>
+                </tr>
+            `)
+        }
+        })
+    </script>
+    </body>
+  </html>

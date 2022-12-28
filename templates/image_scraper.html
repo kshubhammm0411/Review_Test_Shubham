@@ -1,0 +1,17 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let urls = JSON.parse('{{urls | tojson}}')
+    </script>
+    <body>
+        <div id = 'imgs'></div>
+        <script>
+            urls = JSON.parse(urls.replaceAll("'", '"'))
+            console.log(urls)
+            for (var url of urls){
+                console.log(url)
+                $('#imgs').append(`<img src = '${url}'>`)
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chrone - Google Business</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="../static/vendors/typicons.font/font/typicons.css">
+    <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../static/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../static/css/loader.css">
+    <link rel="stylesheet" href="../static/css/posts_head.css">
+    <link rel="stylesheet" href="../static/css/nav.css">
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1231.0.min.js"></script>
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../static/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../static/images/favicon.png" />
+    <script src="https://kit.fontawesome.com/a40af5c449.js" crossorigin="anonymous"></script>
+    <script src="../static/js/common/login.js"></script>
+  </head>
+  <body class="sidebar-hidden">
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="/dashboard"><img src="../static/img/chrone.svg" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="home_xg_tab" style="cursor: pointer;" data-toggle="dropdown">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Home</b></span>
+              </a>
+              <a class="nav-link d-md-block dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="reviews_xg_tab" style="width: 60px;cursor: pointer;" data-toggle="dropdown">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Reviews</b></span>
+              </a>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="photos_xg_tab" style="cursor: pointer;">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Photos</b></span>
+              </a>
+              <div class="d-none d-md-block" style="border-bottom: 2px solid #aaa;">
+                <a class="d-none d-md-block active nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="posts_xg_tab" style="cursor: pointer;">
+                  <span style="margin: 0px;" class="nav-profile-name"><b>Posts</b></span>
+                </a>
+              </div>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="account_xg_tab" style="cursor: pointer;">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Account</b></span>
+              </a>
+              <button type="button" id="upload-pics_xg_tab" class="btn btn-primary btn-fw m-1" style="width: 8rem; height: 36px;">Upload Photos</button>
+              <div class="dropdown d-md-none">
+                <button class="navbar-toggler navbar-toggler-right align-self-center" type="button" data-toggle="dropdown" aria-haspopup="true">
+                  <span class="typcn typcn-th-menu"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3" id="menu_dropdown" data-x-placement="top-start" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 70px; left: -100px; transform: translate3d(0px, 35px, 0px);">
+                  <a class="dropdown-item" id="photos_dropdown_tab">Photos</a>
+                  <a class="dropdown-item" id="reviews_dropdown_tab">Reviews</a>
+                  <a class="dropdown-item" id="account_dropdown_tab">Account</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="p-0 navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button">
+            
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="row mt-3 h-100">
+            <div class="col-lg-12 d-flex grid-margin stretch-card" id="review_reply">
+              <div class="card">
+                <div class="card-body">
+                  <div class="head_cont d-flex flex-wrap">
+                    <h4 class="card-title mb-3">Google Business Posts</h4>
+                  </div>
+                  <div class="head_cont" id="new_post_container">
+                    <button type="button" id="new_post" class="m-3 p-2 btn btn-info btn-fw m-1 log-btn" data-toggle="modal" data-target="#new_post_modal" style="width: 8rem; height: 36px;">Create New Post</button>
+                  </div>
+                  <div id="posts-list" class="d-flex flex-column">
+                    <div class="" id="loader_posts">
+                      <div class="loader"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex d-md-none flex-row" style="position:fixed; bottom:0;">
+            <div id="home_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center; background-color:blue">
+              <!-- <span class="nav-profile-name">Home</span> -->
+              <button class="btn btn-light" style="border-radius:0; width: 100%; height:100%; border:1px solid white">Home</button>
+            </div>
+            <div id="photos_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+              <!-- <span class="nav-profile-name">Reviews</span> -->
+              <button class="btn btn-light" style="width: 100%; height:100%; border:1px solid white">Photos</button>
+            </div>
+            <div id="reviews_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+              <!-- <span class="nav-profile-name">Reviews</span> -->
+              <button class="btn btn-light" style="width: 100%; height:100%; border:1px solid white">Reviews</button>
+            </div>
+            <div id="posts_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+              <!-- <span class="nav-profile-name">Reviews</span> -->
+              <button class="btn btn-dark" style="width: 100%; height:100%; border:1px solid white">Posts</button>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer d-md-flex d-none">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.chrone.app/" target="_blank">Chrone</a> 2022</span>
+              <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from Bootstrapdash.com</span> -->
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Confirm</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center">
+            <p id="delete_sum">Are you sure you want to delete this image</p>
+            <div class="d-none" id="loader_del_posts">
+              <div class="loader"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" id="close" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-info" id="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="new_post_modal" tabindex="-1" role="dialog" aria-labelledby="new_post_modal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="font-size: large;">New Post</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="display: flex; justify-content:center">
+            <div id="posts-form" class="card-body row d-flex flex-wrap">
+              <div class="table-responsive pt-4">
+                <input id="file-selected" type="file" name="img[]" single class="file-upload-default" style="display:none;" accept="image/*,video/*">
+                  <button class="file-upload-browse btn btn-inverse-secondary d-none" type="button" id="image-rechoose">Re Select</button>
+                  <button class="file-upload-browse btn btn-inverse-primary" type="button" id="image-upload">Choose Images</button>
+                </div>
+                <div class="input-group col-xs-12" id="uploaded_files"></div>
+                <div class="d-flex flex-wrap justify-content-between">
+                  <p class="card-title mt-2 mb-1" style="font-size: small;">Add description for post*</p>
+                </div>
+                <div class="table-responsive d-flex">
+                  <textarea id="text_desc" name="textmsg" rows="6" style="width: 100%;" ></textarea>
+                </div>
+                <div class="table-responsive d-flex justify-content-left">
+                  <button id="create_new_post" type="button" class="log-btn btn btn-info btn-fw mt-2" style="width: auto; height: 36px;">Create New Post</button>
+                <div class="m-2 p-1 d-none justify-content-center" id="loader_div_newpost">
+                  <div class="loader"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="close_qr" type="button" class="btn btn-info qr-code-modal-close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="../static/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../static/js/off-canvas.js"></script>
+    <script src="../static/js/hoverable-collapse.js"></script>
+    <script src="../static/js/template.js"></script>
+    <script src="../static/js/settings.js"></script>
+    <script src="../static/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="../static/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="../static/vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="../static/js/posts.js"></script>
+    <!-- End custom js for this page-->
+    <!-- Start of HubSpot Embed Code -->
+    <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22508010.js"></script>
+    <script type="text/javascript" src="../static/js/hubspot_chat.js"></script> -->
+    <!-- End of HubSpot Embed Code -->
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{% for cat in data.services %}
+<div data-w-id="62c04d36-a683-a139-c091-3165cb60c729" class="faq-wrap" style="background-color: #aecce8">
+    <div class="faq-question">
+        <h3 class="question">{{ cat.category }}</h3>
+        <div class="icon-wrap"><img src="images/Rectangle-576.png" loading="lazy" alt=""></div>
+    </div>
+    <div style="height:0px;display:none" class="faq-answer">
+        <div style="opacity:0" class="service-content-wrapper ml-0 _w-100">
+        <div class="service-items mt-40">
+            {% for svc in cat.services %}
+            <div class="service-item-row">
+            <div class="service-item-row-top">
+                <h3 class="beauty-price-title">{{ svc.name }}</h3>
+                <div class="dotted-border"></div>
+                <div class="beauty-price-from">from</div>
+                <div class="beauty-price">{{ svc.price }}</div>
+            </div>
+            <div class="service-item-row-bottom">
+                <div>{{ svc.description }}<br></div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="#" class="beautybtn toggle white w-button">GET AN APPOINTMENT</a>
+        </div>
+    </div>
+</div>
+{% endfor %} 

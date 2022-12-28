@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chrone - Google Business</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="../static/vendors/typicons.font/font/typicons.css">
+    <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../static/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../static/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../static/images/favicon.png" />
+    <script>
+      var place_id = '{{place_id}}'
+      var keyword = '{{keyword}}'
+      var ismax = '{{ismax}}'
+    </script>
+    <script src="https://kit.fontawesome.com/a40af5c449.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="sidebar-hidden">
+    <div id="map" style="height: 100vh; width: 100vw;"></div>
+    <!-- <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">
+          <div class="row mt-3 h-100">
+            <div class="col-lg-12 d-flex grid-margin stretch-card" id="review_reply">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-wrap justify-content-between">
+                    <h4 class="card-title mb-3">Google Maps Ranking</h4>
+                  </div>
+                  <div class="font-weight-light my-3">The circles represent the location where the search is being made, and the number inside the circle represents the rank of your business in the Google Maps business list when anyone searches the given search term from that particular location.</div>
+                  <div id="map" style="height: 400px; width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="../static/vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ7ZgL79XvCtAUCz8v1o8ZHeohoORA-tE&callback=initMap&v=weekly" defer></script>
+    <script src="../static/js/local_search_grid.js"></script>
+  </body>
+</html>

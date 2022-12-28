@@ -1,0 +1,95 @@
+<html>
+    <body style="background-color: #E0E0E0; display: flex; justify-content: center; align-items: center;">
+        <h1 style="color: #FFF; text-align: center; padding: 20px 40px; background-color: #090110; border-radius: 10px; font-family: sans-serif;" id="link">Proceed to App Store</h1>
+    </body>
+    <script>
+        let linkEle = document.getElementById("link");
+        linkEle.addEventListener('click', (e) => {
+            navigator.clipboard.writeText('{{data}}');
+            setTimeout(() => {
+                window.location.href = "{{red_url}}";
+            }, 500)
+        })
+        // function iosCopyToClipboard() {
+        //     var $input = $('#e1');
+        //     $input.val(90);
+        //     if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+        //         var el = $input.get(0);
+        //         var editable = el.contentEditable;
+        //         var readOnly = el.readOnly;
+        //         el.contentEditable = 'true';
+        //         el.readOnly = 'false';
+        //         var range = document.createRange();
+        //         range.selectNodeContents(el);
+        //         var sel = window.getSelection();
+        //         sel.removeAllRanges();
+        //         sel.addRange(range);
+        //         el.setSelectionRange(0, 999999);
+        //         el.contentEditable = editable;
+        //         el.readOnly = readOnly;
+        //     } else {
+        //         $input.select();
+        //     }
+        //     document.execCommand('copy');
+        //     $input.blur();
+        // }
+        // iosCopyToClipboard();
+        // window.Clipboard = (function(window, document, navigator) {
+        //     var textArea,
+        //         copy;
+
+        //     function isOS() {
+        //         return navigator.userAgent.match(/ipad|iphone/i);
+        //     }
+
+        //     function createTextArea(text) {
+        //         textArea = document.createElement('textArea');
+        //         textArea.value = text;
+        //         document.body.appendChild(textArea);
+        //     }
+
+        //     function selectText() {
+        //         var range,
+        //             selection;
+
+        //         if (isOS()) {
+        //             range = document.createRange();
+        //             range.selectNodeContents(textArea);
+        //             selection = window.getSelection();
+        //             selection.removeAllRanges();
+        //             selection.addRange(range);
+        //             textArea.setSelectionRange(0, 999999);
+        //         } else {
+        //             textArea.select();
+        //         }
+        //     }
+
+        //     function copyToClipboard() {        
+        //         document.execCommand('copy');
+        //         document.body.removeChild(textArea);
+        //     }
+
+        //     copy = function(text) {
+        //         createTextArea(text);
+        //         selectText();
+        //         copyToClipboard();
+        //     };
+
+        //     return {
+        //         copy: copy
+        //     };
+        // })(window, document, navigator);
+
+        // Clipboard.copy('text to be copied');
+        
+        // navigator.clipboard.writeText('random copy text');
+        // document.addEventListener("DOMContentLoaded", async () => {
+        //     navigator.clipboard.writeText('random copy text');
+        //     // await parent.navigator.clipboard.writeText('{{data}}');
+        //     // window.location.href = "{{red_url}}"
+        // });
+        // // setTimeout(()=>{
+        // //     window.location.href = "{{red_url}}"
+        // // }, 500)
+    </script>
+</html>

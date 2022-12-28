@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chrone - Google Business</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="../static/vendors/typicons.font/font/typicons.css">
+    <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../static/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../static/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../static/images/favicon.png" />
+    <script src="https://kit.fontawesome.com/a40af5c449.js" crossorigin="anonymous"></script>
+    <script src="../static/js/common/login.js"></script>
+    <style>
+      .mandatory-field {
+        color: red;
+        font-size: 16px;
+      }
+      .form-control::placeholder {
+        color: #c1c1c1;
+        opacity: 1; /* Firefox */
+      }
+    </style>
+  </head>
+  <body class="sidebar-hidden">
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="https://chrone.work/dashboard"><img src="../static/img/chrone.svg" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <!-- <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <div class="d-none d-md-block" style="border-bottom: 2px solid #aaa;">
+                <a class="nav-link active dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="home_xg_tab" style="cursor: pointer;" data-toggle="dropdown">
+                    <span style="margin: 0px;" class="nav-profile-name"><b>Home</b></span>
+                </a>
+              </div>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="reviews_xg_tab" style="width: 60px;cursor: pointer;" data-toggle="dropdown">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Reviews</b></span>
+              </a>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="photos_xg_tab" style="cursor: pointer;">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Photos</b></span>
+              </a>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="posts_xg_tab" style="cursor: pointer;">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Posts</b></span>
+              </a>
+              <button type="button" id="upload-pics_xg_tab" class="btn btn-primary btn-fw m-1" style="width: 8rem; height: 36px;">Upload Photos</button>
+              <div class="dropdown d-md-none">
+                <button class="navbar-toggler navbar-toggler-right align-self-center" type="button" data-toggle="dropdown" aria-haspopup="true">
+                  <span class="typcn typcn-th-menu"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3" data-x-placement="top-start" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 70px; left: -100px; transform: translate3d(0px, 35px, 0px);">
+                  <a class="dropdown-item" id="photos_tab">All Photos</a>
+                  <a class="dropdown-item" id="reviews_tab">Reviews</a>
+                </div>
+              </div>
+            </li>
+          </ul> -->
+          <button class="p-0 navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button">
+            
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial -->
+        <div class="main-panel d-none">
+          <div class="row mt-3 h-100">
+            <div class="col-lg-12 d-flex grid-margin stretch-card" id="review_reply">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-wrap justify-content-between flex-column">
+                    <h4 class="card-title mb-3">Your Business Information</h4>
+                    <p>Please fill following information it will be used to complete your google business profile and help us grow your online presence</p>
+                  </div>
+                  <div class="form-sample">
+                    <h4 class="mt-5 mb-4">Personal Details</h4>
+                    <div class="form-group d-none" id="first_name_form">
+                      <label>First Name</label><label class="mandatory-field mx-2">*</label>
+                      <input type="text" class="form-control" id="first_name" placeholder="Your first name">
+                    </div>
+                    <div class="form-group d-none" id="last_name_form">
+                      <label>Last Name</label><label class="mandatory-field mx-2">*</label>
+                      <input type="text" class="form-control" id="last_name" placeholder="Your last name">
+                    </div>
+                    <div class="form-group d-none" id="personal_number_form">
+                      <label>Personal Number</label><label class="mandatory-field mx-2">*</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">+1</span>
+                        </div>
+                        <input type="tel" class="form-control" id="personal_number" maxlength="10" placeholder="Your 10 digit number">
+                      </div>
+                    </div>
+                    <hr>
+                    <h4 class="mt-5 mb-4">Business Details</h4>
+                    <div class="form-group d-none" id="biz_name_form">
+                      <label>Name</label><label class="mandatory-field mx-2">*</label>
+                      <input type="text" class="form-control" id="name" placeholder="Business name">
+                    </div>
+                    <div class="form-group d-none" id="open_date_form">
+                      <label>Open Date</label>
+                      <input type="date" class="form-control" id="open_date" placeholder="Business opening/launch date">
+                    </div>
+                    <div class="form-group d-none" id="address_form">
+                      <label>Address</label><label class="mandatory-field mx-2">*</label>
+                      <textarea rows="4" style="width: 100%;" type="text" class="form-control" id="address" placeholder="Business line address"></textarea>
+                    </div>
+                    <div class="form-group d-none" id="zipcode_form">
+                      <label>Zip Code</label><label class="mandatory-field mx-2">*</label>
+                      <input type="text" class="form-control" id="zipcode" placeholder="Area zipcode">
+                    </div>
+                    <div class="form-group d-none" id="city_form">
+                      <label>City</label><label class="mandatory-field mx-2">*</label>
+                      <input type="text" class="form-control" id="city" placeholder="City name">
+                    </div>
+                    <div class="form-group d-none" id="state_form">
+                      <label>State</label><label class="mandatory-field mx-2">*</label>
+                      <input type="text" class="form-control" id="state" placeholder="State name">
+                    </div>
+                    <div class="form-group d-none" id="phone_form">
+                      <label>Phone Number</label><label class="mandatory-field mx-2">*</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">+1</span>
+                        </div>
+                        <input type="tel" class="form-control" id="phone" maxlength="10" placeholder="10 digit business phone number">
+                      </div>
+                    </div>
+                    <div class="form-group d-none" id="description_form">
+                      <label>Description</label>
+                      <textarea rows="5" style="width: 100%;" type="text" class="form-control" id="description" placeholder="Describe your business"></textarea>
+                    </div>
+                    <div class="form-group d-none" id="website_form">
+                      <label>Website</label>
+                      <input type="text" class="form-control" id="website" placeholder="Business website link">
+                    </div>
+                    <div class="form-group d-none" id="appointment_link_form">
+                      <label>Appointment Link</label>
+                      <input type="text" class="form-control" id="appointment_link" placeholder="Appointment booking link">
+                    </div>
+                    <div class="form-group d-none" id="booking_handle_form">
+                      <label style="padding-right:10px;">Booking Handel : </label>
+                      <select name="booking handel" id="booking_handels">
+                        <option disabled selected value>Select an option</option>
+                        <option value="vagaro">Vagaro</option>
+                        <option value="styleseat">Styleseat</option>
+                        <option value="booksy">Booksy</option>
+                        <option value="glossgenius">Glossgenius</option>
+                        <option value="fresha">Fresha</option>
+                        <option value="square">Square</option>
+                        <option value="acuity">Acuity</option>
+                        <option value="acuity">Others</option>
+                      </select>
+                      <input type="text" class="form-control" id="booking_handel_other" placeholder="enter the booking handle">
+                    </div>
+                    <div class="form-group d-none" id="categories_form">
+                      <label>Categories</label>
+                      <input type="text" class="form-control" id="categories" placeholder="Categories">
+                    </div>
+                    <hr>
+                    <h4 class="mt-5 mb-4">Social Media Details</h4>
+                    <div class="form-group d-none" id="instagram_link_form">
+                      <label>Instagram Handel</label>
+                      <input type="text" class="form-control" id="instagram_link" placeholder="@profile">
+                    </div>
+                    <div class="form-group d-none" id="facebook_link_form">
+                      <label>Facebook Handel</label>
+                      <input type="text" class="form-control" id="facebook_link" placeholder="business_handle">
+                    </div>
+                    <div class="form-group d-none" id="tiktok_link_form">
+                      <label>Tik-Tok Handle</label>
+                      <input type="text" class="form-control" id="tiktok_link" placeholder="@profile">
+                    </div>
+                  </div>
+                  <div class="form-group d-none" id="regularHours" >
+                    <label for="exampleInputEmail1">Regular Hours</label><br>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="mon_rh_chk" name="Monday" value="sp_rh_mon">
+                      &nbsp;&nbsp;
+                      <label for="Monday" style="align-self: center;margin: 0px;">Monday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_mon_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Monday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_mon_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="tue_rh_chk" name="Tuesday" value="sp_rh_tue">
+                      &nbsp;&nbsp;
+                      <label for="Tuesday" style="align-self: center;margin: 0px;flex-grow: 1;">Tuesday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_tue_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Monday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_tue_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="wed_rh_chk" name="Wednesday" value="sp_rh_wed">
+                      &nbsp;&nbsp;
+                      <label for="Wednesday" style="align-self: center;margin: 0px;flex-grow: 1;">Wednesday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_wed_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Wednesday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_wed_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="thu_rh_chk" name="Thursday" value="sp_rh_thu">
+                      &nbsp;&nbsp;
+                      <label for="Thursday" style="align-self: center;margin: 0px;flex-grow: 1;">Thursday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_thu_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Thursday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_thu_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="fri_rh_chk" name="Friday" value="sp_rh_fri">
+                      &nbsp;&nbsp;
+                      <label for="Friday" style="align-self: center;margin: 0px;flex-grow: 1;">Friday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_fri_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Friday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_fri_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="sat_rh_chk" name="Saturday" value="sp_rh_sat">
+                      &nbsp;&nbsp;
+                      <label for="Saturday" style="align-self: center;margin: 0px;flex-grow: 1;">Saturday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_sat_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Saturday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_sat_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="sun_rh_chk" name="Sunday" value="sp_rh_sun">
+                      &nbsp;&nbsp;
+                      <label for="Sunday" style="align-self: center;margin: 0px;flex-grow: 1;">Sunday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_rh_sun_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Sunday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_rh_sun_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                  </div>
+                    <!-- <hr width="90%" style="margin: auto;padding: 10px 10px 10px 10px;"> -->
+                  <div class="form-group d-none" id="specialHours">
+                    <label for="exampleInputEmail1">Special Hours</label><br>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="mon_sh_chk" name="Monday" value="sp_sh_mon">
+                      &nbsp;&nbsp;
+                      <label for="Monday" style="align-self: center;margin: 0px;">Monday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_mon_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Monday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_mon_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="tue_sh_chk" name="Tuesday" value="sp_sh_tue">
+                      &nbsp;&nbsp;
+                      <label for="Tuesday" style="align-self: center;margin: 0px;flex-grow: 1;">Tuesday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_hh_tue_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Monday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_hh_tue_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="wed_sh_chk" name="Wednesday" value="sp_sh_wed">
+                      &nbsp;&nbsp;
+                      <label for="Wednesday" style="align-self: center;margin: 0px;flex-grow: 1;">Wednesday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_wed_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Wednesday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_wed_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="thu_sh_chk" name="Thursday" value="sp_sh_thu">
+                      &nbsp;&nbsp;
+                      <label for="Thursday" style="align-self: center;margin: 0px;flex-grow: 1;">Thursday</label>
+                      &nbsp;&nbsp;
+                    </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_thu_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Thursday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_thu_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="fri_rh_chk" name="Friday" value="sp_rh_fri">
+                      &nbsp;&nbsp;
+                      <label for="Friday" style="align-self: center;margin: 0px;flex-grow: 1;">Friday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_fri_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Friday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_fri_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex flex-row m-2">
+                      <input type="checkbox" id="sat_sh_chk" name="Saturday" value="sp_sh_sat">
+                      &nbsp;&nbsp;
+                      <label for="Saturday" style="align-self: center;margin: 0px;flex-grow: 1;">Saturday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_sat_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Saturday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_sat_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                    <div class="d-flex m-2">
+                      <input type="checkbox" id="sun_sh_chk" name="Sunday" value="sp_sh_sun">
+                      &nbsp;&nbsp;
+                      <label for="Sunday" style="align-self: center;margin: 0px;flex-grow: 1;">Sunday</label>
+                      &nbsp;&nbsp;
+                      </div>
+                      <div class="d-flex m-2 justify-content-center">
+                        <input type="time" class="form-control" id="sp_sh_sun_start" name="openTime" style="width: 40%;"><br>
+                        <label for="Sunday" class="ml-2 mr-2" style="align-self: center;margin: 0px;">-</label>
+                        <input type="time" class="form-control" id="sp_sh_sun_end" name="closeTime" style="width: 40%;"><br>
+                      </div>
+                  </div>
+                </div>
+                <button type="button" style="margin: auto;" class="log-btn submit-btn btn btn-primary my-3 d-none d-md-block">Submit</button>
+                <div class="submit-btn-cont fixed-bottom d-md-none">
+                  <button type="button" style="margin: auto;" class="log-btn submit-btn btn btn-primary">Submit & Proceed</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer d-md-flex d-none">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.chrone.app/" target="_blank">Chrone</a> 2022</span>
+              <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from Bootstrapdash.com</span> -->
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="../static/vendors/js/vendor.bundle.base.js"></script>
+    <style>
+      h4 {
+        font-weight: 600;
+        margin: 15px 0px;
+      }
+
+      @media all and (max-width: 450px) and (min-height: 400px) {
+        .submit-btn-cont {
+          background-color: white;
+          height: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          box-shadow: 0px -1px 5px 1px #d1d1d1;
+          bottom: 0px;
+        }
+      }
+    </style>
+    <script src="../static/js/profile_completion.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Onboard</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="static/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="static/vendors/mdi/css/materialdesignicons.min.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="static/css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="static/css/loader.css">
+  <script type='text/javascript'>
+    window.smartlook||(function(d) {
+      var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+      var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+      c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+      })(document);
+      smartlook('init', '01228557b7634d29a271a3238776c1752eaa5153', { region: 'eu' });
+  </script>
+  <!-- Hotjar Tracking Code for https://chrone.ai -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3203533,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  <!-- endinject -->
+  <link rel="shortcut icon" href="static/images/favicon.png" />
+</head>
+
+<script>
+  var email = '{{email}}';
+  var first_name = '{{first_name}}';
+  var last_name = '{{last_name}}';
+  var picture = '{{picture}}';
+  var first_device = '{{first_device}}';
+  localStorage.setItem("email", email);
+  localStorage.setItem("first_name", first_name);
+  localStorage.setItem("last_name", last_name);
+  localStorage.setItem("picture", picture);
+</script>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="https://chrone.work/login"><img src="static/img/chrone.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="typcn typcn-th-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="content-wrapper d-flex align-items-center auth px-0">
+        <div class="row w-100 mx-0">
+          <div class="col-lg-4 mx-auto">
+            <div class="auth-form-light text-center py-5 px-4 px-sm-5">
+              <h3 class="">You have successfully signed up</h3>
+              <form class="pt-3">
+                <h4 class="card-title text-left">(Step 2/3) Select your service category</h4>
+                <div id="professions" class="d-flex flex-column text-left m-2">
+                </div>
+                <hr>
+                <h4 class="card-title text-left">(Step 3/3) Select your google business profile</h4>
+                <div id="biz_profile" class="d-flex flex-column text-left m-2">
+                </div>
+                <button type="button" id="submit-onboard" class="btn btn btn-secondary mt-3 d-flex">
+                  <b>Submit</b>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- base:js -->
+  <script src="static/vendors/js/vendor.bundle.base.js"></script>
+  <script src="static/js/onboard.js"></script>
+</body>
+
+</html>

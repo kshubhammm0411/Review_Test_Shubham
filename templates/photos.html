@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chrone - Google Business</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/image_render.css">
+    <link rel="stylesheet" href="../static/vendors/typicons.font/font/typicons.css">
+    <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../static/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- <link rel="stylesheet" href="../static/css/image_render.css"> -->
+    <link rel="stylesheet" href="../static/css/nav.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../static/css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="../static/css/loader.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../static/images/favicon.png" />
+    <script src="https://kit.fontawesome.com/a40af5c449.js" crossorigin="anonymous"></script>
+    <script type='text/javascript'>
+      window.smartlook||(function(d) {
+        var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+        var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+        c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+        })(document);
+        smartlook('init', '01228557b7634d29a271a3238776c1752eaa5153', { region: 'eu' });
+    </script>
+    <style>
+      .live-pill {
+        width: 70px;
+        height: 20px;
+        background-color: green;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .live-pill > p {
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+      }
+
+      .uploaded-pill {
+        width: 70px;
+        height: 20px;
+        background-color: orange;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .uploaded-pill > p {
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+      }
+
+      .rejected-pill {
+        width: 70px;
+        height: 20px;
+        background-color: red;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .rejected-pill > p {
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+      }
+
+      .duplicate-pill {
+        width: 70px;
+        height: 20px;
+        background-color: maroon;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .duplicate-pill > p {
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+      }
+    </style>
+    <!-- Hotjar Tracking Code for https://chrone.ai -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:3203533,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <script src="../static/js/common/login.js"></script>
+  </head>
+  <body class="sidebar-hidden">
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="/dashboard"><img src="../static/img/chrone.svg" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="d-none d-md-block nav nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="home_xg_tab" style="cursor: pointer;" data-toggle="dropdown">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Home</b></span>
+              </a>
+              <a class="d-none d-md-block nav nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="reviews_xg_tab" style="width: 60px;cursor: pointer;" data-toggle="dropdown">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Reviews</b></span>
+              </a>
+              <div class="d-none d-md-block" style="border-bottom: 2px solid #aaa;">
+                <a class="nav nav-link active dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="photos_xg_tab" style="cursor: pointer;">
+                  <span style="margin: 0px;" class="nav-profile-name" ><b>Photos</b></span>
+                </a>
+              </div>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="posts_xg_tab" style="cursor: pointer;">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Posts</b></span>
+              </a>
+              <a class="d-none d-md-block nav-link dropdown-toggle pl-1 pr-1 cursor-pointer justify-content-center" id="account_xg_tab" style="cursor: pointer;">
+                <span style="margin: 0px;" class="nav-profile-name"><b>Account</b></span>
+              </a>
+              <button type="button" id="upload-pics_xg_tab" class="btn btn-primary btn-fw m-1" style="width: 8rem; height: 36px;">Upload Photos</button>
+              <div class="dropdown d-md-none">
+                <button class="navbar-toggler navbar-toggler-right align-self-center" type="button" data-toggle="dropdown" aria-haspopup="true">
+                  <span class="typcn typcn-th-menu"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3" id="menu_dropdown" data-x-placement="top-start" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 70px; left: -100px; transform: translate3d(0px, 35px, 0px);">
+                  <a class="dropdown-item" id="photos_dropdown_tab">Photos</a>
+                  <a class="dropdown-item" id="reviews_dropdown_tab">Reviews</a>
+                  <a class="dropdown-item" id="account_dropdown_tab">Account</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="p-0 navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button">
+            
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="row mt-3 h-100">
+            <div class="col-lg-12 d-flex grid-margin stretch-card" id="review_reply">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-wrap justify-content-between">
+                    <h4 class="card-title mb-3">Google Business Images</h4>
+                  </div>
+                  <div class="d-flex flex-row btn-group">
+                    <!-- <a class="d-none d-md-block nav nav-link pl-1 pr-1 cursor-pointer justify-content-center" id="gmb_uploaded" style="cursor: pointer;" data-toggle="dropdown"> -->
+                      <!-- <button id="gmb_uploaded" style="margin: 0px;" class="gmb_photo btn btn-outline-info"><b>Uploaded</b></button> -->
+                    <!-- </a> -->
+                    <button id="gmb_all" style="margin: 0px;" class="gmb_photo btn btn-outline-info" ><b>All Photos</b></button>
+                    <!-- <a class="d-none d-md-block nav nav-link pl-1 pr-1 cursor-pointer justify-content-center" id="gmb_not_uploaded" style="cursor: pointer;" data-toggle="dropdown"> -->
+                    <button id="gmb_not_uploaded" style="margin: 0px;" class="gmb_photo btn btn-outline-info"><b>Rejected</b></button>
+                    <!-- </a> -->
+                    <!-- <a class="d-none d-md-block nav nav-link pl-1 pr-1 cursor-pointer justify-content-center"  style="cursor: pointer;" data-toggle="dropdown"> -->
+                      
+                    <!-- </a> -->
+                  </div>
+                  <div id="pics-list" class="row d-flex flex-wrap justify-content-center"></div>
+                  <div class="justify-content-center m-2" id="loader_div_photos">
+                    <div class="loader"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex d-md-none flex-row" style="position:fixed; bottom:0;">
+            <div id="home_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center; background-color:blue">
+              <!-- <span class="nav-profile-name">Home</span> -->
+              <button class="btn btn-light" style="border-radius:0; width: 100%; height:100%; border:1px solid white">Home</button>
+            </div>
+            <div id="photos_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+              <!-- <span class="nav-profile-name">Reviews</span> -->
+              <button class="btn btn-dark" style="width: 100%; height:100%; border:1px solid white">Photos</button>
+            </div>
+            <div id="reviews_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+              <!-- <span class="nav-profile-name">Reviews</span> -->
+              <button class="btn btn-light" style="width: 100%; height:100%; border:1px solid white">Reviews</button>
+            </div>
+            <div id="posts_tab" style="width: 25vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+              <!-- <span class="nav-profile-name">Reviews</span> -->
+              <button class="btn btn-light" style="width: 100%; height:100%; border:1px solid white">Posts</button>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer d-md-flex d-none">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.chrone.app/" target="_blank">Chrone</a> 2022</span>
+              <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from Bootstrapdash.com</span> -->
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Confirm</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center">
+            <div class="d-none" id="loader_div">
+              <div class="loader"></div>
+            </div>
+            <p id="delete_content">Are you sure you want to delete this image?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" id="close_delete_modal" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" id="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade mt-5" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center">
+            <i class="arrow left" id="prev"></i>
+            <div class="d-none" id="loader_photo_modal">
+              <div class="loader"></div>
+            </div>
+            <div id="show_photo" class="d-flex justify-content-center" style="min-height: 35px;">
+              <img id="modal-photo-img" src="" alt="Image" loading="lazy" style="object-fit: contain; width:90%">
+              <video id="modal-video" muted autoplay src="" style="object-fit: contain; width: 30%; height: 30%;" loop>Your browser does not support the video tag.</video>
+            </div>
+              <i class="arrow right" id="next"></i>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" id="close_modal" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="../static/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../static/js/off-canvas.js"></script>
+    <script src="../static/js/hoverable-collapse.js"></script>
+    <script src="../static/js/template.js"></script>
+    <script src="../static/js/settings.js"></script>
+    <script src="../static/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="../static/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="../static/vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="../static/js/photos.js"></script>
+    <!-- End custom js for this page-->
+    <!-- Start of HubSpot Embed Code -->
+    <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22508010.js"></script>
+    <script type="text/javascript" src="../static/js/hubspot_chat.js"></script> -->
+    <!-- End of HubSpot Embed Code -->
+  </body>
+</html>

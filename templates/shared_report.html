@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chrone - Google Business</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="../static/vendors/typicons.font/font/typicons.css">
+    <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../static/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../static/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../static/images/favicon.png" />
+    <script src="https://kit.fontawesome.com/a40af5c449.js" crossorigin="anonymous"></script>
+    <script src="../static/js/common/login.js"></script>
+  </head>
+  <body class="sidebar-hidden">
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="https://chrone.work/login"><img src="../static/img/chrone.svg" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a href="https://chrone.work/login">
+                <button type="button" class="btn btn-inverse-primary btn-fw">Login</button>
+              </a>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button">
+            
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper" id="home">
+            <h3 id="welcome_msg"></h3>
+            <p>Let's improve your SEO and rank your profile higher on Google!</p>
+            <div class="row mt-3">
+              <div class="col-lg-12 d-flex grid-margin stretch-card" id="review_reply">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Send Review Link to your Customers</h4>
+                    </div>
+                    <div class="table-responsive d-flex">
+                      <button id="review_share_link" type="button" class="btn btn-primary btn-fw m-1" style="width: 8rem; height: 36px;" data-toggle="modal" data-target="#review_invite">Share via SMS</button>
+                      <button id="review_copy_link" type="button" class="btn btn-success btn-fw m-1" style="width: 8rem; height: 36px;">Copy Link</button>
+                    </div>
+                    <div class="table-responsive d-flex">
+                      <button id="review_qrcode" type="button" class="btn btn-secondary btn-fw m-1" style="width: 10rem; height: 36px;" data-toggle="modal" data-target="#exampleModal">Generate QR Code</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-xl-12 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Rank on Google Search</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div id="circleProgress6" class="progressbar-js-circle rounded p-3"></div>
+                          </div>
+                          <div class="col-lg-6">
+                            <ul id="rank_list" class="session-by-channel-legend"></ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="row">
+              <div class="col-xl-6 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Review Goal</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <p>Based on the top salon profiles in your area, your goal is to get <b id="goal-reviews">-</b> reviews</p>
+                        <div id="circleProgress" class="progressbar-js-circle rounded p-3"></div>
+                        <p>You currently have <b id="current-reviews">-</b> reviews</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Review Invites</h4>
+                      <p>We recommend sending <b id="goal-invites">-</b> invites this month to achieve this goal</p>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="w3-border" style="width: 90%;">
+                          <div class="w3-blue d-flex justify-content-center align-items-center" id="percent-invites-width" style="height:24px;text-align: center; width: 0%;"><b id="percent-invites">-</b></div>
+                        </div>
+                        <div class="mt-1" id="progress-invites">
+                          -/-
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-8 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Profile Views</h4>
+                      <span>last 10 days</span>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <canvas id="impressions" style="max-height: 300px; max-width: 600px;"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Profile Stats</h4>
+                      <span>last 10 days</span>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Call Clicks</div>
+                              <div id='call-click'></div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Direction Requested</div>
+                              <div id='direction-req'></div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Conversations</div>
+                              <div id='conversation_count'></div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Website Clicks</div>
+                              <div id='website-click'></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-wrapper d-none" id="reviews">
+            <div class="row mt-3">
+              <div class="col-lg-12 d-flex grid-margin stretch-card" id="review_reply">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Reply to Google Reviews</h4>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer d-md-flex d-none">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.chrone.app/" target="_blank">Chrone</a> 2022</span>
+              <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from Bootstrapdash.com</span> -->
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+
+    <div class="modal fade" id="review_invite" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Send Review Message</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-description">
+                  Text your customers to ask for a review.
+                </p>
+                <form class="forms-sample">
+                  <div class="form-group">
+                    <label for="exampleInputUsername1">Name</label>
+                    <input type="text" class="form-control" id="customer_name" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Phone</label><br>
+                    <small>Enter number with country code</small>
+                    <input type="phone" class="form-control" id="customer_phone" placeholder="Phone">
+                  </div>
+                  <div class="btn btn-primary btn-fw">Send</div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Review QR Code</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img id="big-qr-code" alt="QR Code" height="320" width="320">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="../static/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../static/js/off-canvas.js"></script>
+    <script src="../static/js/hoverable-collapse.js"></script>
+    <script src="../static/js/template.js"></script>
+    <script src="../static/js/settings.js"></script>
+    <script src="../static/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- plugin js for this page -->
+    <script src="../static/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="../static/vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="../static/js/dashboard.js"></script>
+    <!-- End custom js for this page-->
+    <!-- Start of HubSpot Embed Code -->
+    <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22508010.js"></script>
+    <script type="text/javascript" src="../static/js/hubspot_chat.js"></script> -->
+    <!-- End of HubSpot Embed Code -->
+  </body>
+</html>

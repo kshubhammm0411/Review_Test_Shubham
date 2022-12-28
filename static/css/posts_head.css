@@ -1,0 +1,29 @@
+.post_img {
+  height: fit-content;
+}
+
+#posts-list {
+  display: flex;
+  align-items: center;
+}
+
+.post_div {
+  width: 512px;
+}
+
+@media all and (max-width: 450px) and (min-height: 400px) {
+  .head_cont {
+    display: flex;
+    justify-content: center;
+  }
+
+  .post_img {
+    height: fit-content;
+    width: 320px;
+  }
+
+  .post_div {
+    width: 320px;
+  }
+}
+

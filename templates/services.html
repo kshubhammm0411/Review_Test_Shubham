@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Services - Google Business</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="../static/vendors/typicons.font/font/typicons.css">
+    <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../static/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../static/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../static/images/favicon.png" />
+    <script src="https://kit.fontawesome.com/a40af5c449.js" crossorigin="anonymous"></script>
+    <script src="../static/js/common/login.js"></script>
+  </head>
+  <body class="sidebar-hidden">
+    <div class="container-scroller d-none">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="https://chrone.work/dashboard"><img src="../static/img/chrone.svg" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle pl-0 pr-1 cursor-pointer" id="home_xg_tab" style="cursor: pointer;" data-toggle="dropdown">
+                <span class="nav-profile-name"><b>Home</b></span>
+              </a>
+              <a class="nav-link dropdown-toggle pl-0 pr-2 cursor-pointer" id="reviews_xg_tab" style="cursor: pointer;" data-toggle="dropdown">
+                <span class="nav-profile-name"></b>Reviews</b></span>
+              </a>
+              <a class="nav-link dropdown-toggle pl-0 pr-2 cursor-pointer" id="photos_xg_tab" style="cursor: pointer;">
+                <span class="nav-profile-name"></b>Photos</b></span>
+              </a>
+              <button type="button" id="upload-pics_xg_tab" class="btn btn-primary btn-fw m-1" style="width: 8rem; height: 36px;">Upload Photos</button>
+            </li>
+          </ul>
+          <button class="p-0 navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button">
+            
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="row mt-3 h-100">
+            <div class="col-lg-12 d-flex grid-margin stretch-card" id="review_reply">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-wrap justify-content-between">
+                    <h4 class="card-title mb-3">Google Business Services</h4>
+                  </div>
+                  <div class="form-sample" id="service-div">
+                    loading..
+                  </div>
+                </div>
+                <div class="form-sample" id="regularhours-wrap">
+                </div>
+                <button type="button" id="submit-btn" style="margin: auto;" class="btn btn-primary mb-5 d-none">Submit</button>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex d-md-none flex-row" style="position:fixed; bottom:0;">
+              <div id="home_tab" style="width: 50vw; height: 40px; display:flex; justify-content:center; align-items:center; background-color:blue">
+                <!-- <span class="nav-profile-name">Home</span> -->
+                <button class="btn btn-light" style="border-radius:0; width: 100%; height:100%; border:1px solid white">Home</button>
+              </div>
+              <div id="reviews_tab" style="width: 50vw; height: 40px; display:flex; justify-content:center; align-items:center;">
+                <!-- <span class="nav-profile-name">Reviews</span> -->
+                <button class="btn btn-light" style="width: 100%; height:100%; border:1px solid white">Reviews</button>
+              </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer d-md-flex d-none">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.chrone.app/" target="_blank">Chrone</a> 2022</span>
+              <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard </a>templates from Bootstrapdash.com</span> -->
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="../static/vendors/js/vendor.bundle.base.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page-->
+    <script src="../static/js/services.js"></script>
+    <!-- End custom js for this page-->
+    <!-- Start of HubSpot Embed Code -->
+    <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22508010.js"></script>
+    <script type="text/javascript" src="../static/js/hubspot_chat.js"></script> -->
+    <!-- End of HubSpot Embed Code -->
+  </body>
+</html>
